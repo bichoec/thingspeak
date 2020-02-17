@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B30989323FB2D92000579FC /* ViewController_Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30989223FB2D92000579FC /* ViewController_Functions.swift */; };
+		6B30989523FB2DBB000579FC /* ViewController_Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30989423FB2DBB000579FC /* ViewController_Actions.swift */; };
 		6B4927761FEACF3C00F7A884 /* ObjIoT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4927751FEACF3C00F7A884 /* ObjIoT.swift */; };
 		6B5317DF1FE95C59000AEF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5317DE1FE95C59000AEF0C /* AppDelegate.swift */; };
 		6B5317E11FE95C59000AEF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5317E01FE95C59000AEF0C /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B30989223FB2D92000579FC /* ViewController_Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Functions.swift; sourceTree = "<group>"; };
+		6B30989423FB2DBB000579FC /* ViewController_Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Actions.swift; sourceTree = "<group>"; };
 		6B4927751FEACF3C00F7A884 /* ObjIoT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjIoT.swift; sourceTree = "<group>"; };
 		6B5317DB1FE95C59000AEF0C /* IoT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5317DE1FE95C59000AEF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B30988F23FB2D47000579FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B30989123FB2D7B000579FC /* Extension */,
+				6B5317E01FE95C59000AEF0C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6B30989023FB2D66000579FC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				6B4927751FEACF3C00F7A884 /* ObjIoT.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		6B30989123FB2D7B000579FC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6B30989223FB2D92000579FC /* ViewController_Functions.swift */,
+				6B30989423FB2DBB000579FC /* ViewController_Actions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		6B5317D21FE95C59000AEF0C = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +102,14 @@
 		6B5317DD1FE95C59000AEF0C /* IoT */ = {
 			isa = PBXGroup;
 			children = (
+				6B30989023FB2D66000579FC /* Class */,
+				6B30988F23FB2D47000579FC /* Controller */,
 				6B5317DE1FE95C59000AEF0C /* AppDelegate.swift */,
-				6B5317E01FE95C59000AEF0C /* ViewController.swift */,
 				6B5317E21FE95C59000AEF0C /* Main.storyboard */,
 				6B5317E51FE95C59000AEF0C /* Assets.xcassets */,
 				6B5317E71FE95C59000AEF0C /* LaunchScreen.storyboard */,
 				6B5317EA1FE95C59000AEF0C /* Info.plist */,
 				6BC5E22E23909DDC00BF87FC /* media */,
-				6B4927751FEACF3C00F7A884 /* ObjIoT.swift */,
 			);
 			path = IoT;
 			sourceTree = "<group>";
@@ -180,8 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B30989323FB2D92000579FC /* ViewController_Functions.swift in Sources */,
 				6B4927761FEACF3C00F7A884 /* ObjIoT.swift in Sources */,
 				6B5317E11FE95C59000AEF0C /* ViewController.swift in Sources */,
+				6B30989523FB2DBB000579FC /* ViewController_Actions.swift in Sources */,
 				6B5317DF1FE95C59000AEF0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

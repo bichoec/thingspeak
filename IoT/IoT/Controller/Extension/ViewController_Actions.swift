@@ -1,38 +1,14 @@
 //
-//  ViewController.swift
+//  ViewController_Actions.swift
 //  IoT
 //
-//  Created by Eric Guzman on 12/19/17.
-//  Copyright © 2017 Eric Guzman. All rights reserved.
+//  Created by Eric Guzman on 2/17/20.
+//  Copyright © 2020 Eric Guzman. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var btnModo: UISwitch!
-    @IBOutlet weak var btnPersianas: UISwitch!
-    @IBOutlet weak var btnAireAcondicionado: UISwitch!
-    
-    @IBOutlet weak var btnCalefaccion: UISwitch!
-    
-    @IBOutlet weak var lblTemperature: UILabel!
-    
-    var obj = ObjIoT()
-    
-    var checkTemperature : Timer!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        checkTemperature = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(verificarTemperatura), userInfo: nil, repeats: true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+extension ViewController {
     @IBAction func cambiarModo(_ sender: Any) {
         if btnModo.isOn {
             obj.cambiar_Mode_Manual()
@@ -89,17 +65,4 @@ class ViewController: UIViewController {
             obj.cambiar_Heat_OFF()
         }
     }
-    
-    @objc func verificarTemperatura() {
-        
-        do{
-            let content = try String(contentsOf: URL(string: obj.url_get_temp_value)!, encoding: String.Encoding.utf8)
-            lblTemperature.text = String(Double(round(100*Double(content)!)/100))
-        } catch {
-            print("JSON serialization failed: \(error)")
-        }
-    }
-    
-    
 }
-
